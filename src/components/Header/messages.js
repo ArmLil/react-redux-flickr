@@ -1,9 +1,5 @@
 
 export default  {
-  home: {
-    text: 'Home',
-  },
-  services: {
-    text: 'services',
-  },
+  home: 'Home',
+  services: 'services',
 };

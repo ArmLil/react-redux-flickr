@@ -2,6 +2,7 @@ import { photosLoaded, photoLoadingError } from '../../actions'
 import request from '../../utils/request'
 
 export function fetchPhotos(username,term,limit) {
+  //const FLICKR_ROOT = 'https://api.flickr.com/services/rest/?'
   const FLICKR_ROOT = 'https://api.flickr.com/services/rest/?'
   const FLICKR_METHOD_PHOTOS_SEARCH = 'flickr.photos.search'
 

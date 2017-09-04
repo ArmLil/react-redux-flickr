@@ -9,6 +9,9 @@ const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  text-shadow: -5px -5px 2px hsla(337, 33%, 68%, 0.20),
+               -3px -3px 2px hsla(337, 33%, 68%, 0.20),
+               -1px -1px 2px hsla(337, 33%, 68%, 0.20);
 `;
 
 const HeadDiv = styled.div`
@@ -64,7 +67,6 @@ const Name = styled.h5`
 
 
 const Item = (item) =>{
-  //console.log('in item, photo',item, `url(${item.photo.url_s})`,item.photo.datetaken)
   return(
     <ItemContainer>
       <Name>{item.photo.title}</Name>

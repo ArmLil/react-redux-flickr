@@ -1,19 +1,15 @@
 import React from 'react';
-import messages from './messages';
 import Iframe from '../../styling-components//Iframe';
+import HomePage from '../../containers/HomePage'
 
-export default class FeaturePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
-
+export default class FeaturePage extends React.Component {
   shouldComponentUpdate() {
     return false;
   }
-
   render() {
     return (
-      <div>
-        <h3>
-          {messages.header.text}
-        </h3>
+      <div style={{display:'flex', height: '40em'}}>
+        <HomePage></HomePage>
         <Iframe src="https://mashupguide.net/1.0/html/ch06.xhtml" />
       </div>
     );

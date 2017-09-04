@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router';
-import List from '../../components/List';
-import LoadingIndicator from '../../components/LoadingIndicator';
+import React from 'react'
+import { Link } from 'react-router'
+import List from '../../components/List'
+import LoadingIndicator from '../../components/LoadingIndicator'
 import { cachingSingle } from '../../actions'
 //import store from '../../store'
 import { connect } from 'react-redux'
@@ -14,6 +14,16 @@ import HomePage from '../../containers/HomePage'
 
 export class Photos extends React.Component {
 
+  componentWillReceiveProps(newProps) {
+    const {username,term,limit} = this.props;
+    const update = (limit !== newProps.limit)
+                || (term !== newProps.term)
+                || (username !== newProps.username);
+    if(update) {
+      this.props.onPhotoPageLoad(newProps.username,newProps.term,newProps.limit);
+    }
+    else return;
+  }
   componentDidMount(){
     const {username,term,limit} = this.props
     this.props.onPhotoPageLoad(username,term,limit);
@@ -22,10 +32,8 @@ export class Photos extends React.Component {
     this.props.clickHandler(photo);
   }
   render() {
-    console.log('...render... Photos')
     const { loading, error, photos, username } = this.props;
-     if(!username) {
-       return null }
+    console.log('...render... Photos, this.props', this.props)
      if (loading) {
        return <List component={LoadingIndicator} /> }
      if (error) {
@@ -70,7 +78,7 @@ export function mapDispatchToProps(dispatch) {
     dispatch(loadPhotos());
     dispatch(fetchPhotos(username,term,limit))
   }
- };
+ }
 }
 
 const mapStateToProps = (state,ownProps) => {

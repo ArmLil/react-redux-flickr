@@ -6,16 +6,16 @@ import {
   LOAD_SINGLE_SUCCESS,
   LOAD_SINGLE_ERROR,
   CACHED_SINGLE,
-  USERNAME,
+  //USERNAME,
 
 } from '../constants';
 
-export function setUsername(username) {
-  return {
-    type: USERNAME,
-    username,
-  };
-}
+// export function setUsername(username) {
+//   return {
+//     type: USERNAME,
+//     username,
+//   };
+// }
 
 export function cachingSingle(cached_single) {
   return {

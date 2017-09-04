@@ -3,16 +3,23 @@ import CenteredSection from '../../styling-components/CenteredSection'
 import Container from '../../styling-components/Container'
 import messages from './messages'
 import FormComponent from '../../components/FormComponent';
+import Title from '../../styling-components/Title'
 
 
-const HomePage = () => (
+
+export default class HomePage extends React.Component {
+  shouldComponentUpdate() {
+    return false;
+  }
+  render() {
+    return (
     <Container >
         <CenteredSection >
-          <h3> {messages.startProjectHeader}</h3>
-          <p>  {messages.startProjectMessage} </p>
+          <Title> {messages.startProjectHeader}</Title>
+          <p style={{color: 'hsla(337, 92%, 52%, 0.94)'}}>  {messages.startProjectMessage} </p>
         </CenteredSection>
         <FormComponent></FormComponent>
     </Container>
-)
-
-export default HomePage;
+    )
+  }
+}

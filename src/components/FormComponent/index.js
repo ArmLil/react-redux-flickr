@@ -3,25 +3,19 @@ import Form from '../../styling-components/Form'
 import Input from '../../styling-components/Input'
 import Section from '../../styling-components/Section'
 import P from '../../styling-components/P'
-import HeaderLink from '../../styling-components/HeaderLink';
+import HeaderLink from '../../styling-components/HeaderLink'
 import messages from './messages'
 
 export default class FormComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      path :'',
       username : '',
       term: '',
       limit:'',
     };
   }
-
- submitForm (evt) {
-   if (evt !== undefined && evt.preventDefault) {
-     evt.preventDefault();
-   }
-   this.props.onSubmitForm(this.state.username,this.state.term,this.state.limit)
- }
 
  onChangeApi_key (evt) {
    this.setState({username: evt.target.value})
@@ -32,8 +26,18 @@ export default class FormComponent extends React.Component {
  onChangeLimit (evt) {
    this.setState({limit: evt.target.value})
  }
+ onSubmitClick () {
+   const {username, term, limit} = this.state;
+   if(!term || !term || !limit) {
+     alert("Please, fill in all fields!!");
+   }
+   else {
+     this.setState({path: `/${username}/${term}/${limit}`})
+   }
+ }
   render() {
-    const {username, term, limit} = this.state;
+    console.log('...Form render...')
+    const path = this.state.path;
     return (
       <Section>
          <Form>
@@ -59,9 +63,10 @@ export default class FormComponent extends React.Component {
              />
           <div>
            <HeaderLink
+             onClick={this.onSubmitClick.bind(this)}
              style={{borderRadius:'10%'}}
-             to={`/${username}/${term}/${limit}`}>
-               <P>SUBMIT</P>
+             to={path}>
+             <P>SUBMIT</P>
            </HeaderLink>
           </div>
          </Form>

@@ -32,6 +32,8 @@ import A from '../../styling-components/A';
           )
       }
       if (single) {
+      console.log('if single => ', single)
+
       //console.log('if single => ', single.photo.urls.url[0]._content)
       const url = single.photo.urls.url[0]._content;
        return (
@@ -70,6 +72,17 @@ export function mapDispatchToProps(dispatch) {
 }
 
 export default connect( mapStateToProps, mapDispatchToProps)(SinglePage);
+
+
+// <h4> Title  {single.photo.title._content} </h4>
+// <p> photo id - {single.photo.id} </p>
+// <p> photo owner - {single.photo.owner.realname} </p>
+// <p> owner username - {single.photo.owner.username} </p>
+// <p style={{padding:'1em'}}> ...{single.photo.description._content} </p>
+// <A href={url}> url = {url} </A>
+
+//{single.contentId}
+
 //
 // <Img
 //   src={url_o}

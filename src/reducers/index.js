@@ -7,7 +7,7 @@
    LOAD_SINGLE_SUCCESS,
    LOAD_SINGLE_ERROR,
    CACHED_SINGLE,
-   USERNAME,
+   //USERNAME,
  } from '../constants';
 
  const initialState = {
@@ -18,16 +18,16 @@
    singleError: false,
    single: false,
    cached_single:false,
-   username:false,
+  // username:false,
  };
 
  const homeReducer = (state = initialState, action) => {
   switch (action.type) {
-  case USERNAME:
-  return Object.assign({}, state,
-    {
-      username: action.username,
-    })
+  // case USERNAME:
+  // return Object.assign({}, state,
+  //   {
+  //     username: action.username,
+  //   })
   case LOAD_PHOTOS:
   return Object.assign({}, state,
     {

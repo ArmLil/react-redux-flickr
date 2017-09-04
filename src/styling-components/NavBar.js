@@ -1,6 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { generator } from 'uigradients'
 
 export default styled.div`
+  ${generator({ gradient: 'cherryblossoms'})};
   border: 1px solid #41ADDD;
   margin 0;
   padding: 2px;
