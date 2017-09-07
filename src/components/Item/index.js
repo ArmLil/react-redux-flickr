@@ -9,6 +9,11 @@ const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  &:hover {
+    -moz-box-shadow: 3px 3px 10px 5px hsla(337, 33%, 68%, 0.8);
+    -webkit-box-shadow: 3px 3px 10px 5px hsla(337, 33%, 68%, 0.8);
+     box-shadow: 3px 3px 10px 5px hsla(337, 33%, 68%, 0.8);
+  }
   text-shadow: -5px -5px 2px hsla(337, 33%, 68%, 0.20),
                -3px -3px 2px hsla(337, 33%, 68%, 0.20),
                -1px -1px 2px hsla(337, 33%, 68%, 0.20);

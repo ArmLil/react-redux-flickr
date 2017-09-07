@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { generator } from 'uigradients'
+import styled from 'styled-components';
+import { generator } from 'uigradients';
 
 export default styled.div`
   ${generator({ gradient: 'cherryblossoms'})};
@@ -11,7 +11,8 @@ export default styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: inset 1px 1px 5px #000000;
+  box-shadow: inset 2px 1px 7px #000000;
+
   @media all and (max-width: 550px) {
     flex-wrap: wrap;
   }

@@ -7,10 +7,10 @@ const Img = styled.img`
   padding:0.3em;
 
   &:hover {
-      -moz-box-shadow: 0 0 20px #41ADDD;
-      -webkit-box-shadow: 0 0 20px #41ADDD;
-       box-shadow: 5px 5px 20px #41ADDD;
- }
-`;
+      -moz-box-shadow: 0 0 10px #41ADDD;
+      -webkit-box-shadow: 0 0 10px #41ADDD;
+       box-shadow: 0px 0px 10px #41ADDD;
+   }
+  `;
 
 export default Img;
