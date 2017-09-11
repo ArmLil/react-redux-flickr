@@ -1,8 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Iframe = styled.iframe`
-
-  width: 50em;
+  width: 70em;
 `;
 
 export default Iframe;

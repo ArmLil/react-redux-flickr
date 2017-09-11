@@ -11,6 +11,6 @@ export default (
       <IndexRoute component={HomePage}/>
       <Route path="/services" component={ServicePage}/>
       <Route path="/:username/:term/:limit" component={Photos} />
-      <Route path="/:username/:photo_id" component={SinglePage}/>
+      <Route path="/:username/:photo_id/:farm/:server/:url_id" component={SinglePage}/>
     </Route>
 )

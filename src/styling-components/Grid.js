@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-
+import styled from 'styled-components'
 
 const Grid = styled.div`
+  width: 80em;
   display: flex;
   flex-wrap: wrap;
   padding :1em;

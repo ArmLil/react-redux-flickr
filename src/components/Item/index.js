@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const ItemContainer = styled.div`
   cursor:pointer;
@@ -72,16 +72,17 @@ const Name = styled.h5`
 
 
 const Item = (item) =>{
+  const { title, url_s, datetaken} = item.photo
   return(
     <ItemContainer>
-      <Name>{item.photo.title}</Name>
-      <HeadDiv style={{backgroundImage: `url(${item.photo.url_s})`}}>
+      <Name>{title}</Name>
+      <HeadDiv style={{backgroundImage: `url(${url_s})`}}>
       <Descript>
         <Mark>Flickr</Mark>
-        <H5>{item.photo.datetaken}</H5>
+        <H5>{datetaken}</H5>
       </Descript>
       </HeadDiv>
-      <Name>owner '{item.photo.ownername}'</Name>
+      <Name> owner '{item.photo.ownername}'</Name>
     </ItemContainer>
   )
 }

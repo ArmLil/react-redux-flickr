@@ -5,24 +5,7 @@ import {
   LOAD_SINGLE,
   LOAD_SINGLE_SUCCESS,
   LOAD_SINGLE_ERROR,
-  CACHED_SINGLE,
-  //USERNAME,
-
 } from '../constants';
-
-// export function setUsername(username) {
-//   return {
-//     type: USERNAME,
-//     username,
-//   };
-// }
-
-export function cachingSingle(cached_single) {
-  return {
-    type: CACHED_SINGLE,
-    cached_single,
-  };
-}
 
 export function loadPhotos() {
   return {

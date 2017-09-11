@@ -1,5 +1,5 @@
-import React from 'react';
-import Iframe from '../../styling-components//Iframe';
+import React from 'react'
+import Iframe from '../../styling-components//Iframe'
 import HomePage from '../../containers/HomePage'
 
 export default class FeaturePage extends React.Component {

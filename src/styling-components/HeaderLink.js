@@ -1,5 +1,5 @@
-import { Link } from 'react-router';
-import styled from 'styled-components';
+import { Link } from 'react-router'
+import styled from 'styled-components'
 
 export default styled(Link)`
   display: inline-flex;
@@ -9,12 +9,8 @@ export default styled(Link)`
   border-radius: 7px;
   height: 1em;
   align-items: center;
-  -webkit-font-smoothing: antialiased;
-  -webkit-touch-callout: none;
-  user-select: none;
   cursor: pointer;
-  outline: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-weight: bold;
   font-size: 15px;
   border: 1.5px solid #41ADDD;

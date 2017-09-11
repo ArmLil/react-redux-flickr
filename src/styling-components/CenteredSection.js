@@ -1,8 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import Section from './Section';
-
-const CenteredSection = styled(Section)`
+const CenteredSection = styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
